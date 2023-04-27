@@ -12,6 +12,13 @@
 
                   {{ realEstates[1].id }}
                 <card :realEstate="realEstates[1]"></card>
+                <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4 md:px-0 h-full">
+                    <div v-for="(realEstate) in realEstates" :key="realEstate.id" class="h-full">
+                      <card
+                          :realEstate="realEstate">
+                      </card>
+                    </div>
+                </div>
                   <div v-if="realEstates && realEstates.length" class="flex flex-col md:flex-row">
                       <slick ref="slick"
                               :options="slickOptions"
