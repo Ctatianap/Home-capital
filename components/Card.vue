@@ -1,88 +1,71 @@
 <template>
     <div class="h-full" v-loading="loading">
-        <div v-if="realEstate" class="bg-white border rounded-md shadow-md border-primary-3 p-4">
+        <div v-if="realEstate" class="bg-white border rounded-md shadow-md border-primary-3">
             <!--Image-->
             <img
               @click="goToUrl('/companies/'+ realEstate.id)"
               :src="realEstate.images[0]"
               :alt="realEstate.property_code"
               class="w-full object-contain rounded-t-md cursor-pointer"
-              decoding="async"
-              loading="lazy"
-              style="height: 82px"/>
+              />
+              <!-- style="height: 82px" -->
 
-              <!--price-->
-              <div class="flex flex-row items-center mb-2">
-                  <p class="text-caption text-gray-2 truncate">
-                  <span class="text-overline text-primary-2">
-                      ${{ realEstate.price_cop }}
-                  </span>
-                      COP
-                  </p>
+              <div class="p-4">
+                  <div v-if="realEstate.price_cop" class="flex flex-row items-center mb-2">
+                      <p>
+                        <span class="text-overline text-primary">
+                            ${{ realEstate.price_cop }}
+                        </span>
+                            COP
+                      </p>
+                  </div>
+                  <div v-if="realEstate.location" class="flex flex-row items-center mb-2">
+                      <p class="text-teal-600">
+                          {{ realEstate.location.ubication + "-" + realEstate.location.neighborhood }}
+                      </p>
+                  </div>
+                  <div v-if="realEstate.description" class="mb-2 md:mb-0">
+                      <div class=" h-16 overflow-ellipsis">
+                          <p v-if="realEstate.description" class=" text-teal-600">
+                              {{ realEstate.description.length > 120 ? realEstate.description.substr(0, 120) + '...' : realEstate.description }}
+                          </p>
+                      </div>
+                  </div>
+                  <hr class="border-solid border-thin border-primary-3 w-full my-4">
+                  <div v-if="realEstate.characteristics" class="flex flex-row justify-between mb-4">
+                      <div class="text-center px-2">
+                          <span class="w-4 bg-items px-2 py-1 rounded-full text-caption">
+                              {{ realEstate.characteristics.size_m2 }}
+                          </span>
+                          <p  class="text-caption mt-2">
+                              Mts
+                          </p>
+                      </div>
+                      <div class="text-center px-2">
+                          <span class="w-4 bg-items px-2 py-1 rounded-full text-caption">
+                              {{ realEstate.characteristics.bedrooms }}
+                          </span>
+                          <p  class="text-caption mt-2">
+                              Habitaciones
+                          </p>
+                      </div>
+                      <div class="text-center px-2">
+                          <span class="w-4 bg-items px-2 py-1 rounded-full text-caption">
+                              {{ realEstate.characteristics.bathrooms }}
+                          </span>
+                          <p class="text-caption mt-2">
+                              Baños
+                          </p>
+                      </div>
+                  </div>
               </div>
-              <div class="flex flex-row items-center mb-2">
-                  <p class="text-caption text-gray-2 truncate">
-                  <span class="text-overline text-primary-2">
-                      {{ realEstate.location.ubication }} -
-                  </span>
-                      {{ realEstate.location.neighborhood }}
-                  </p>
-              </div>
 
 
-            <!--realEstate name, description-->
-            <!-- <div v-if="realEstate && realEstate.name" class="mb-2 md:mb-0">
-                <div :class="$mq !== 'sm'? 'h-8 overflow-y-hidden': 'h-full'">
-                    <a :href="`/companies/${realEstate.id}`" target="_blank">
-                        <p class="text-body2 text-primary mb-4 truncate">
-                            {{ realEstate.name.length > 43 ? realEstate.name.substr(0, 43) + '...' : realEstate.name }}
-                        </p>
-                    </a>
-                </div>
-                <div :class=" $mq !== 'sm'? 'h-16 overflow-y-hidden': 'h-full'">
-                    <p v-if="realEstate.description" class="text-caption text-gray-2">
-                        {{ realEstate.description.length > 135 ? realEstate.description.substr(0, 120) + '...' : realEstate.description }}
-                    </p>
-                </div>
-            </div> -->
+
+
+
             <!--Accountants-->
-            <!-- <div v-if="realEstate" class="flex flex-row justify-between border-b border-primary-3 pb-4 mb-4">
-                <div class="text-center px-2">
-                    <span class="bg-secondary-2 px-2 py-1 rounded-full text-caption text-secondary-3">
-                        {{ realEstate.talentees_count }}
-                    </span>
-                    <p v-if="!isEnganchatic" class="text-button text-xs text-gray-2 mt-2">
-                        {{ $store.getters.trans('texts.talents') }}
-                    </p>
-                    <p v-else class="text-button text-xs text-gray-2 mt-2">
-                        {{ $store.getters.trans('texts.connections') }}
-                    </p>
-                </div>
-                <div class="text-center px-2">
-                    <span class="bg-secondary-2 px-2 py-1 rounded-full text-caption text-secondary-3">
-                        {{ realEstate.challenges_count ? realEstate.challenges_count : 0 }}
-                    </span>
-                    <p @click="realEstate.challenges_count > 0 ? goToUrl(`/programs/5/match?option-realEstate=${realEstate.id}`) : null"
-                       class="text-button text-xs text-gray-2 mt-2"
-                       :class="realEstate.challenges_count > 0 ? 'cursor-pointer' : ''">
-                        {{ $store.getters.trans('texts.vacancies') }}
-                    </p>
-                </div>
-                <div class="text-center px-2">
-                    <span v-if="!isEnganchatic" class="bg-secondary-2 px-2 py-1 rounded-full text-caption text-secondary-3">
-                        {{ realEstate.pitches_count ? realEstate.pitches_count : 0 }}
-                    </span>
-                    <span v-else class="bg-secondary-2 px-2 py-1 rounded-full text-caption text-secondary-3">
-                        {{ realEstate.views ? realEstate.views : 0 }}
-                    </span>
-                    <p v-if="!isEnganchatic" class="text-button text-xs text-gray-2 mt-2">
-                        {{ $store.getters.trans('texts.applications') }}
-                    </p>
-                    <p v-else class="text-button text-xs text-gray-2 mt-2">
-                        {{ $store.getters.trans('texts.views') }}
-                    </p>
-                </div>
-            </div> -->
+
             <!--Actions-->
             <!-- <div class="flex" v-if="!isEnganchatic">
                 <div class="w-full md:w-1/2">
