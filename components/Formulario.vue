@@ -1,68 +1,56 @@
 <template>
   <div class="flex flex-col bg-gray-100 border rounded-md shadow-md p-6">
-    <h2 class="text-lg mb-6 font-bold text-primary">Información del cliente</h2>
-    <form @submit.prevent="saveCustomer" class="flex flex-col">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" v-model="customer.name" />
+      <el-form :model="ruleForm" :rules="rules" :ref="ref">
+          <div class="w-full flex flex-col lg:flex-row">
+              <el-form-item label="Nombre" prop="firstName" class="w-full lg:w-1/2 mr-2">
+                  <el-input v-model="ruleForm.firstName" placeholder="Nombre" />
+              </el-form-item>
+              <el-form-item label="Apellido" prop="lastName" class="w-full lg:w-1/2 ml-2">
+                  <el-input v-model="ruleForm.lastName" placeholder="Apellido" />
+              </el-form-item>
+          </div>
+          <div class="w-full flex flex-col lg:flex-row">
+              <el-form-item label="phone" prop="phone" class="w-full lg:w-1/2 mr-2">
+                  <el-input v-model="ruleForm.phone" placeholder="Teléfono" />
+              </el-form-item>
+              <el-form-item label="identification" prop="identification" class="w-full lg:w-1/2 ml-2">
+                  <el-input v-model="ruleForm.identification" placeholder="Cédula" />
+              </el-form-item>
+          </div>
+          <el-form-item label="Email" prop="email">
+              <el-input v-model="ruleForm.email" placeholder="Correo electronico" />
+          </el-form-item>
 
-      <label for="address">Dirección:</label>
-      <input type="text" id="address" v-model="customer.address" />
-
-      <label for="phone">Teléfono:</label>
-      <input type="text" id="phone" v-model="customer.phone" />
-
-      <button type="submit">Guardar información del cliente</button>
-    </form>
-    <div class="w-full border-2 border-cyan-800 rounded-md p-4">
-      <el-form
-        :model="ruleForm"
-        :rules="rules"
-        label-width="120px"
-        ref="ruleForm"
-      >
-        <el-form-item label="firstName" prop="firstName">
-          <el-input v-model="ruleForm.firstName" placeholder="Nombre" />
-        </el-form-item>
-        <el-form-item label="lastName" prop="lastName">
-          <el-input v-model="ruleForm.lastName" placeholder="Apellido" />
-        </el-form-item>
-        <el-form-item label="address" prop="address">
-          <el-input v-model="ruleForm.address" placeholder="Dirección" />
-        </el-form-item>
-        <el-form-item label="phone" prop="phone">
-          <el-input v-model="ruleForm.phone" placeholder="Teléfono" />
-        </el-form-item>
-        <el-form-item>
-          <el-button @click="resetForm">Limpiar</el-button>
-          <el-button @click="submitForm" type="primary">Guardar</el-button>
-        </el-form-item>
+          <el-form-item>
+              <el-button @click="resetForm(ruleForm)">Limpiar</el-button>
+              <el-button @click="submitForm(ruleForm)" type="primary">Guardar</el-button>
+          </el-form-item>
       </el-form>
-    </div>
   </div>
 </template>
 
 <script>
-import { Form, Input, ElButton } from "element-ui";
+import { Form, Input, Button } from "element-ui";
 export default {
-  components: { Form, Input, ElButton },
+  components: { Form, Input, Button },
+  props: {
+    ref:{
+      default:""
+    }
+  },
   data() {
     return {
-      customer: {
-        name: '',
-        address: '',
-        phone: '',
-      },
       ruleForm: {
         firstName: "",
         lastName: "",
-        address: "",
+        email: "",
         phone: 0,
       },
       rules: {
         firstName: [
           {
             required: true,
-            message: "Porfavor ingresa tu nombre",
+            message: "Por favor ingresa tu nombre",
             trigger: "blur",
           },
           {
@@ -74,7 +62,7 @@ export default {
         lastName: [
           {
             required: true,
-            message: "Please input Last name",
+            message: "Por favor ingresa tu Apellido",
             trigger: "blur",
           },
           {
@@ -83,8 +71,11 @@ export default {
             trigger: "blur",
           },
         ],
-        address: [
-          { required: true, message: "Please input Address", trigger: "blur" },
+        email: [
+          { required: true,
+            message: "Por favor ingresa tu email",
+            trigger: "blur"
+          },
           {
             min: 1,
             message:"La longitud debe ser mayor que 1 y no debe contener espacios",
@@ -94,7 +85,15 @@ export default {
         phone: [
           { required: true, message: "Por favor ingresa un número de telefono", trigger: "blur" },
           {
-            type: number,
+            message:"La longitud debe ser mayor que 1 y no debe contener espacios",
+            trigger: "blur",
+          },
+        ],
+        identification: [
+          { required: true,
+            message: "Por favor ingresa el número de identificación",
+            trigger: "blur" },
+          {
             message:"La longitud debe ser mayor que 1 y no debe contener espacios",
             trigger: "blur",
           },
@@ -106,21 +105,35 @@ export default {
   created() {
     const savedCustomer = localStorage.getItem('customer');
     if (savedCustomer) {
-      this.customer = JSON.parse(savedCustomer);
+      this.ruleForm = JSON.parse(savedCustomer);
     }
   },
   watch: {
-    customer: {
+    ruleForm: {
       handler() {
-        localStorage.setItem('customer', JSON.stringify(this.customer));
+        localStorage.setItem('customer', JSON.stringify(this.ruleForm));
       },
       deep: true,
     },
   },
   methods: {
     saveCustomer() {
-      console.log('Información del cliente guardada:', this.customer);
+      console.log('Información del cliente guardada:', this.ruleForm);
     },
+    submitForm() {
+        this.$refs[this.ref].validate((valid) => {
+          if (valid) {
+            this.saveCustomer();
+            this.$emit("save", this.ruleForm)
+          } else {
+            console.log('error submit!!');
+            return false;
+          }
+        });
+      },
+    resetForm() {
+      this.$refs[this.ref].resetFields();
+    }
   },
 };
 </script>
