@@ -29,6 +29,7 @@
                         />
                     </div>
                     <div v-else class="mt-14">
+                      <h2 class="text-lg mb-6 font-bold text-primary text-center">Información del Cliente</h2>
                       <Formulario ref="ruleFormClient" @save="payload"/>
                     </div>
                 </div>
@@ -44,12 +45,16 @@ import { Form, Input, Button } from "element-ui";
 
 export default {
   components: {Form, Input, Button},
-  props: {},
+  props: {
+    role:{
+      default:"user"
+    }
+  },
   data() {
       return {
           loading: 0,
-          role: "user",
           search: "",
+          realStatesSelected:[],
       }
   },
   created() {

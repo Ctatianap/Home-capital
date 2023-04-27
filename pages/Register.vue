@@ -1,9 +1,12 @@
 <template>
-  <div class="w-1/3 mx-auto flex flex-col bg-gray-100 border rounded-md shadow-md p-6">
-    <h2 class="text-lg mb-6 font-bold text-primary">Registro</h2>
-    <Formulario ref="ruleFormRegister" @save="register()"/>
-
+  <div>
+      <NavHeader role="agent"/>
+      <div class="w-1/3 mx-auto flex flex-col p-6">
+          <h2 class="text-lg mb-6 font-bold text-primary text-center">Registro</h2>
+          <Formulario ref="ruleFormRegister" @save="register()"/>
+      </div>
   </div>
+
 </template>
 
 <script>
