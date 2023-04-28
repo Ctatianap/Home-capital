@@ -16,13 +16,9 @@ export default {
   created() {
     let url = new URL(window.location.href);
     let search_params = url.searchParams;
-    if (search_params != null || search_params.length) {
+    if (search_params.has('role')) {
       this.role = search_params.get('role');
     }
-    // if (search_params.has('role')) {
-    //     search_params.delete('role')
-    //     history.replaceState({}, '', url.toString())
-    // }
 
   },
   methods: {
