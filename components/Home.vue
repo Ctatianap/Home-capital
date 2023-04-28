@@ -29,8 +29,15 @@
                         />
                     </div>
                     <div v-else class="mt-14">
+                      <div v-for="(realEstateImg) in realStatesSelected" :key="realEstateImg.id" class="h-full">
+                        <img
+                          :src="realEstate.images[0]"
+                          :alt="realEstate.property_code"
+                          class="w-full object-contain rounded-t-md cursor-pointer"
+                          />
+                      </div>
                       <h2 class="text-lg mb-6 font-bold text-primary text-center">Información del Cliente</h2>
-                      <Formulario ref="ruleFormClient" @save="payload"/>
+                      <Formulario nameRef="ruleFormClient" @save="payload"/>
                     </div>
                 </div>
               </div>

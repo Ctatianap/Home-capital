@@ -3,7 +3,7 @@
       <NavHeader role="agent"/>
       <div class="w-1/3 mx-auto flex flex-col p-6">
           <h2 class="text-lg mb-6 font-bold text-primary text-center">Registro</h2>
-          <Formulario ref="ruleFormRegister" @save="register()"/>
+          <Formulario nameRef="ruleFormRegister" @save="register()"/>
       </div>
   </div>
 
@@ -26,7 +26,8 @@ export default {
   },
   methods: {
       register(){
-        console.log("register");
+        console.log("registrado correctamente");
+        window.location.href = "/?role=agent"
       }
   },
 };

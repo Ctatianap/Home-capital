@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col bg-gray-100 border rounded-md shadow-md p-6">
-      <el-form :model="ruleForm" :rules="rules" :ref="ref">
+      <el-form :model="ruleForm" :rules="rules" :ref="nameRef">
           <div class="w-full flex flex-col lg:flex-row">
               <el-form-item label="Nombre" prop="firstName" class="w-full lg:w-1/2 mr-2">
                   <el-input v-model="ruleForm.firstName" placeholder="Nombre" />
@@ -34,7 +34,7 @@ import { Form, Input, Button } from "element-ui";
 export default {
   components: { Form, Input, Button },
   props: {
-    ref:{
+    nameRef:{
       default:""
     }
   },
@@ -121,7 +121,7 @@ export default {
       console.log('Información del cliente guardada:', this.ruleForm);
     },
     submitForm() {
-        this.$refs[this.ref].validate((valid) => {
+        this.$refs[this.nameRef].validate((valid) => {
           if (valid) {
             this.saveCustomer();
             this.$emit("save", this.ruleForm)
@@ -132,7 +132,7 @@ export default {
         });
       },
     resetForm() {
-      this.$refs[this.ref].resetFields();
+      this.$refs[this.nameRef].resetFields();
     }
   },
 };

@@ -2,12 +2,19 @@
     <div class="h-full" v-loading="loading">
         <div v-if="realEstate" class="bg-white border rounded-md shadow-md">
             <!--Image-->
-            <img
-              @click="goToUrl('/companies/'+ realEstate.id)"
-              :src="realEstate.images[0]"
-              :alt="realEstate.property_code"
-              class="w-full object-contain rounded-t-md cursor-pointer"
-              />
+            <div class="relative">
+                <img
+                @click="goToUrl('/detail-property/'+ realEstate.id)"
+                :src="realEstate.images[0]"
+                :alt="realEstate.property_code"
+                class="w-full object-contain rounded-t-md cursor-pointer"
+                />
+                <div class="absolute top-4 right-2 bg-secondary-transparent rounded-md px-4 py-1">
+                  <el-checkbox label="Seleccionar propiedad" name="type"></el-checkbox>
+                </div>
+            </div>
+
+
               <!-- style="height: 82px" -->
 
               <div class="p-4">

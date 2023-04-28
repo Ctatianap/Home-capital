@@ -38,5 +38,12 @@ html {
 
 .bg-secondary {
   background-color: rgb(255 192 32);
-  color: rgb(31, 4, 0);;
+  color: rgb(31, 4, 0);
+  font-weight: semibold;
+}
+
+.bg-secondary-transparent{
+  background-color: rgb(255 192 32 / 77%);
+  font-weight: bold;
+
 }

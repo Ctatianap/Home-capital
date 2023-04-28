@@ -9,7 +9,7 @@
     <NuxtLink v-if="role =='user'" to="/register">
       ¿Soy Agente?
     </NuxtLink>
-    <NuxtLink v-else to="/">
+    <NuxtLink v-else to="/?role=user">
       ¿Soy Usuario?
     </NuxtLink>
   </div>
