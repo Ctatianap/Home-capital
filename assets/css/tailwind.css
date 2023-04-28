@@ -1,0 +1,49 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
+html {
+    font-family: Roboto, sans-serif;
+    line-height: 1.5;
+    color: #6f6f6f;
+}
+
+.text-caption {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+.text-overline {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.text-primary {
+  color: rgb(1, 75, 109);
+}
+
+.bg-nav{
+  background: linear-gradient(to right, white, rgb(1, 75, 109));
+}
+
+.bg-primary {
+  background-color: rgb(1, 75, 109);
+  color: rgb(165, 183, 190);;
+}
+
+.bg-secondary {
+  background-color: rgb(255 192 32);
+  color: rgb(31, 4, 0);
+  font-weight: semibold;
+}
+
+.bg-secondary-transparent{
+  background-color: rgb(255 192 32 / 77%);
+  font-weight: bold;
+
+}

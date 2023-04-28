@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "description": "Apartamento acogedor y luminoso con dos habitaciones, un baño, una cocina equipada y un balcón con vistas a la ciudad.",
+    "images": [
+      "https://img.freepik.com/foto-gratis/paisaje-analogico-ciudad-edificios_23-2149661456.jpg?w=996&t=st=1682565828~exp=1682566428~hmac=12f5c6dbf9ef978327cd97478a8abc249a2ae4ab9cd2f1e0f85890b0de8526a0",
+      "https://www.freepik.es/foto-gratis/disparo-vertical-apartamentos-modernos-dia_10176350.htm#from_view=detail_alsolike",
+      "https://www.freepik.es/foto-gratis/vista-arquitectura-edificios-ciudad-londres_27508644.htm#from_view=detail_alsolike"
+    ],
+    "location": {
+      "ubication": "123 Main St",
+      "neighborhood": "Downtown"
+    },
+    "property_code": 123456,
+    "characteristics": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "size_m2": 150
+    },
+    "price_cop": 950000000
+  },
+  {
+    "id": 2,
+    "description": "Apartamento moderno y espacioso con tres habitaciones, dos baños, una sala-comedor, una cocina con isla y una terraza con jacuzzi.",
+    "images": [
+      "https://img.freepik.com/foto-gratis/sala-estar-lujo-loft-renderizado-3d-estanteria-cerca-estanteria_105762-2224.jpg?size=626&ext=jpg&ga=GA1.1.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/paisaje-analogico-ciudad-edificios_23-2149661456.jpg?w=996&t=st=1682565828~exp=1682566428~hmac=12f5c6dbf9ef978327cd97478a8abc249a2ae4ab9cd2f1e0f85890b0de8526a0",
+      "https://www.freepik.es/foto-gratis/vista-arquitectura-edificios-ciudad-londres_27508644.htm#from_view=detail_alsolike"
+    ],
+    "location": {
+      "ubication": "456 Oak St",
+      "neighborhood": "Suburb"
+    },
+    "property_code": 789012,
+    "characteristics": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "size_m2": 185
+    },
+    "price_cop": 1350000000
+  },
+  {
+    "id": 3,
+    "description": "Apartamento rústico y cálido con una habitación, un baño, una cocina americana y un salón con chimenea y vigas de madera.",
+    "images": [
+      "https://img.freepik.com/foto-gratis/vista-lateral-pareja-abrazada-casa-cajas-dia-mudanza_23-2148647553.jpg?size=626&ext=jpg&ga=GA1.1.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/paisaje-analogico-ciudad-edificios_23-2149661456.jpg?w=996&t=st=1682565828~exp=1682566428~hmac=12f5c6dbf9ef978327cd97478a8abc249a2ae4ab9cd2f1e0f85890b0de8526a0",
+      "https://www.freepik.es/foto-gratis/disparo-vertical-apartamentos-modernos-dia_10176350.htm#from_view=detail_alsolike"
+    ],
+    "location": {
+      "ubication": "789 Elm St",
+      "neighborhood": "Residential"
+    },
+    "property_code": 345678,
+    "characteristics": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "size_m2": 100
+    },
+    "price_cop": 550000000
+  },
+  {
+    "id": 4,
+    "description": "Apartamento minimalista y elegante con una habitación, un baño, una cocina integrada y un salón con grandes ventanales y muebles de diseño..",
+    "images": [
+      "https://img.freepik.com/foto-gratis/hermosa-foto-casa-moderna-cocina-comedor_181624-2870.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/sala-estar-lujo-tipo-loft-estanteria-cerca-mesa-comedor_105762-1796.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr ",
+      "https://img.freepik.com/foto-gratis/edificio-residencial-moderno_1268-14735.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr"
+    ],
+    "location": {
+      "ubication": "456 Oak St",
+      "neighborhood": "Downtown"
+    },
+    "property_code": 456789,
+    "characteristics": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "size_m2": 170
+    },
+    "price_cop": 1150000000
+  },
+  {
+    "id": 5,
+    "description": "Casa acogedora y luminosa con dos habitaciones, un baño, una cocina equipada y un balcón con vistas a la ciudad.",
+    "images": [
+      "https://img.freepik.com/foto-gratis/bangkok-tailandia-12-agosto-2016-hermosa-sala-lujo_1203-2867.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/comedor-comodo-estudio-o-habitacion-hotel_1262-12324.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/3d-renderizado-loft-sala-estar-escandinava-mesa-trabajo-estanteria_105762-2094.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr"
+    ],
+    "location": {
+      "ubication": "111 Maple St",
+      "neighborhood": "Suburb"
+    },
+    "property_code": 234567,
+    "characteristics": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "size_m2": 200
+    },
+    "price_cop": 1800000000
+  },
+  {
+    "id": 6,
+    "description": "Casa vintage y original con una habitación, un baño, una cocina con electrodomésticos retro y un salón con papel pintado y objetos de colección.",
+    "images": [
+      "https://img.freepik.com/foto-gratis/3d-renderizado-loft-sala-estar-escandinava-mesa-trabajo-estanteria_105762-2162.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/acogedor-salon-interior-ventana-panoramica_1262-12322.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/acogedor-apartamento-estudio-dormitorio-sala-estar_1262-12323.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr"
+    ],
+    "location": {
+      "ubication": "222 Oak St",
+      "neighborhood": "Downtown"
+    },
+    "property_code": 345678,
+    "characteristics": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "size_m2": 80
+    },
+    "price_cop": 450000000
+  },
+  {
+    "id": 7,
+    "description": "Apartamento acogedor y luminoso con dos habitaciones, un baño, una cocina equipada y un balcón con vistas a la ciudad.",
+    "images": [
+      "https://img.freepik.com/foto-gratis/sala-estar-lujo-tipo-loft-estanteria-cerca-mesa-comedor_105762-1796.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/edificio-residencial-moderno_1268-14735.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/hermosa-foto-casa-moderna-cocina-comedor_181624-2870.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr"
+    ],
+    "location": {
+      "ubication": "333 Elm St",
+      "neighborhood": "Residential"
+    },
+    "property_code": 567890,
+    "characteristics": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "size_m2": 140
+    },
+    "price_cop": 950000000
+  },
+  {
+    "id": 8,
+    "description": "Apartamento moderno y espacioso con tres habitaciones, dos baños, una sala-comedor, una cocina con isla y una terraza con jacuzzi.",
+    "images": [
+      "https://img.freepik.com/foto-gratis/comedor-comodo-estudio-o-habitacion-hotel_1262-12324.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/3d-renderizado-loft-sala-estar-escandinava-mesa-trabajo-estanteria_105762-2094.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/bangkok-tailandia-12-agosto-2016-hermosa-sala-lujo_1203-2867.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr"
+    ],
+    "location": {
+      "ubication": "444 Maple St",
+      "neighborhood": "Suburb"
+    },
+    "property_code": 678901,
+    "characteristics": {
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "size_m2": 190
+    },
+    "price_cop": 1550000000
+  },
+  {
+    "id": 9,
+    "description": "Apartamento acogedor y luminoso con dos habitaciones, un baño, una cocina equipada y un balcón con vistas a la ciudad.",
+    "images": [
+      "https://img.freepik.com/foto-gratis/acogedor-salon-interior-ventana-panoramica_1262-12322.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/acogedor-apartamento-estudio-dormitorio-sala-estar_1262-12323.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/3d-renderizado-loft-sala-estar-escandinava-mesa-trabajo-estanteria_105762-2162.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr"
+    ],
+    "location": {
+      "ubication": "555 Oak St",
+      "neighborhood": "Downtown"
+    },
+    "property_code": 789012,
+    "characteristics": {
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "size_m2": 50
+    },
+    "price_cop": 300000000
+  },
+  {
+    "id": 10,
+    "description": "Apartamento clásico y sofisticado con tres habitaciones, dos baños, una cocina con muebles de madera y un salón con chimenea y cuadros.",
+    "images": [
+      "https://img.freepik.com/fotos-premium/diseno-interior-hogar-sala-estar-cocina-abierta-casa-tipo-loft_41487-613.jpg?size=626&ext=jpg&ga=GA1.1.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/acogedor-salon-interior-ventana-panoramica_1262-12322.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/3d-renderizado-loft-sala-estar-escandinava-mesa-trabajo-estanteria_105762-2162.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr"
+    ],
+    "location": {
+      "ubication": "666 Elm St",
+      "neighborhood": "Residential"
+    },
+    "property_code": 901234,
+    "characteristics": {
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "size_m2": 300
+    },
+    "price_cop": 2700000000
+  },
+  {
+    "id": 11,
+    "description": "Apartamento acogedor y luminoso con dos habitaciones, un baño, una cocina equipada y un balcón con vistas a la ciudad.",
+    "images": [
+      "https://img.freepik.com/foto-gratis/3d-renderizado-loft-sala-estar-escandinava-mesa-trabajo-estanteria_105762-2094.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/comedor-comodo-estudio-o-habitacion-hotel_1262-12324.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/bangkok-tailandia-12-agosto-2016-hermosa-sala-lujo_1203-2867.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr"
+    ],
+    "location": {
+      "ubication": "777 Maple St",
+      "neighborhood": "Suburb"
+    },
+    "property_code": 123456,
+    "characteristics": {
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "size_m2": 70
+    },
+    "price_cop": 500000000
+  },
+  {
+    "id": 12,
+    "description": "Apartamento vintage y original con una habitación, un baño, una cocina con electrodomésticos retro y un salón con papel pintado y objetos de colección.",
+    "images": [
+      "https://img.freepik.com/foto-gratis/edificio-residencial-moderno_1268-14735.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/sala-estar-lujo-tipo-loft-estanteria-cerca-mesa-comedor_105762-1796.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr",
+      "https://img.freepik.com/foto-gratis/hermosa-foto-casa-moderna-cocina-comedor_181624-2870.jpg?size=626&ext=jpg&ga=GA1.2.1401303965.1682565826&semt=robertav1_2_sidr"
+    ],
+    "location": {
+      "ubication": "888 Oak St",
+      "neighborhood": "Downtown"
+    },
+    "property_code": 234567,
+    "characteristics": {
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "size_m2": 120
+    },
+    "price_cop": 800000000
+  }
+]
