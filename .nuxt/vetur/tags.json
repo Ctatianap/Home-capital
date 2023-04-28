@@ -1,0 +1,17 @@
+{
+  "Card": {
+    "description": "Auto imported from components/Card.vue"
+  },
+  "Formulario": {
+    "description": "Auto imported from components/Formulario.vue"
+  },
+  "Home": {
+    "description": "Auto imported from components/Home.vue"
+  },
+  "NavHeader": {
+    "description": "Auto imported from components/NavHeader.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  }
+}

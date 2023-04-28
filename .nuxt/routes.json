@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Register",
+    "path": "/Register",
+    "component": "C:\\\\Users\\\\Interacpedia\\\\Desktop\\\\Home capital\\\\prueba\\\\pages\\\\Register.vue",
+    "chunkName": "pages/Register",
+    "_name": "_2222b1e2"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Interacpedia\\\\Desktop\\\\Home capital\\\\prueba\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_190f93b6"
+  }
+]
