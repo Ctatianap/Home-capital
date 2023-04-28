@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col bg-gray-100 border rounded-md shadow-md p-6">
+  <div class="flex flex-col bg-neutral-200 border rounded-md shadow-md p-6">
       <el-form :model="ruleForm" :rules="rules" :ref="nameRef">
           <div class="w-full flex flex-col lg:flex-row">
               <el-form-item label="Nombre" prop="firstName" class="w-full lg:w-1/2 mr-2">
@@ -21,14 +21,14 @@
               <el-input v-model="ruleForm.email" placeholder="Correo electronico" />
           </el-form-item>
 
-          <el-form-item>
-              <el-button @click="resetForm(ruleForm)">Limpiar</el-button>
-              <el-button @click="submitForm(ruleForm)" type="primary">Guardar</el-button>
-          </el-form-item>
+          <div class="text-center mx-auto">
+            <el-form-item >
+                <el-button @click="submitForm(ruleForm)" type="primary" class="btn-primary">Guardar</el-button>
+            </el-form-item>
+          </div>
       </el-form>
   </div>
 </template>
-
 <script>
 import { Form, Input, Button } from "element-ui";
 export default {
@@ -45,6 +45,7 @@ export default {
         lastName: "",
         email: "",
         phone: 0,
+        identification:"",
       },
       rules: {
         firstName: [
@@ -103,7 +104,7 @@ export default {
     };
   },
   created() {
-    const savedCustomer = localStorage.getItem('customer');
+    const savedCustomer = localStorage.getItem(this.nameRef);
     if (savedCustomer) {
       this.ruleForm = JSON.parse(savedCustomer);
     }
@@ -111,7 +112,7 @@ export default {
   watch: {
     ruleForm: {
       handler() {
-        localStorage.setItem('customer', JSON.stringify(this.ruleForm));
+        localStorage.setItem(this.nameRef, JSON.stringify(this.ruleForm));
       },
       deep: true,
     },
@@ -131,9 +132,12 @@ export default {
           }
         });
       },
-    resetForm() {
-      this.$refs[this.nameRef].resetFields();
-    }
   },
 };
 </script>
+<style>
+  .btn-primary {
+    background-color: rgb(1, 75, 109);
+    color: rgb(165, 183, 190)
+  }
+</style>
